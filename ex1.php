@@ -1,5 +1,6 @@
 <?php 
 // num1
+echo "num1\n";
 $str1="lohello";
 $a =substr($str1,-2);
 $b =substr($str1,0,2);
@@ -10,9 +11,10 @@ if($a==$b){
 }else{
     echo "first two characters and last two characters of a give string are not same.";
 }
-echo "////////////////////////////////";
+echo "\n";
 /////////////////////////////////////////////////
 //num2 
+echo "num2\n";
 $str3="GOplay";
 $isgo =substr($str1,0,2);
 $go="GO";
@@ -22,10 +24,11 @@ if($isgo==$go){
 }else{
     echo "the text dont start with GO";
 }
-echo "////////////////////////////////";
+echo "\n";
 
 //////////////////////////////////////
 //num3
+echo "num3\n";
 $mul=9;
 
 if($mul>0 && ($mul%3==0) || ($mul%7==0)){
@@ -33,44 +36,47 @@ if($mul>0 && ($mul%3==0) || ($mul%7==0)){
 }else{
     echo "number isnt a multiple of 3 and  7";
 }
-echo "////////////////////////////////";
+echo "\n";
 
 // ////////////////////////////////////////////
 // num4
+echo "num4\n";
 $int1=10;
 $int2=30;
 $int3=50;
-$max=$int1;
-// we can use this 
-// max($int1,$int2,$int3);
 
-for($i1=1;$i1<=3;$i1++){
-    if($int[i]>=$max){
-        $max=$int[i];
-    }
-}
-echo $max;
-echo "////////////////////////////////";
+// we can use this 
+
+
+// for($i1=1;$i1<=3;$i1++){
+//     if($int[i]>=$max){
+//         $max=$int[i];
+//     }
+// }
+echo max($int1,$int2,$int3);
+echo "\n";
 
 //////////////////////////////////
 // num5
+echo "num5\n";
 $nearof1001=99;
 $nearof1002=23;
 $isnearof1001=100-$nearof1001;
-$isnearof1002=100-isnearof1002;
+$isnearof1002=100-$nearof1002;
 //we can use this 
 // min($isnearof1001,$isnearof1002);
 if($nearof1001==$nearof1002){
     echo "0";
 }elseif($isnearof1001<$isnearof1002){   
-     echo "$isnearof1001 is near of 100";
+     echo "$nearof1001 is near of 100";
 }elseif($isnearof1002<$isnearof1001){   
-    echo "$isnearof1002 is near of 100";
+    echo "$nearof1002 is near of 100";
 }
-echo "////////////////////////////////";
+echo "\n";
 
 ///////////////////////////////
 //num6
+echo "num6\n";
 $bet=23;
 $bet2=33;
 if($bet >= 20 && $bet <= 30){
@@ -82,11 +88,11 @@ echo max($bet,$bet2);
 } else {
         echo 0;
 }
-echo "////////////////////////////////";
+echo "\n";
 
 //////////////////////////////////////////
 //num7
-
+echo "num7\n";
 $numbers = "859663215985";
 $digit = 9 ; 
 $count = 0;
@@ -97,20 +103,23 @@ for ($i = 0; $i < strlen($numbers); $i++) {
   }
 }
 echo $count;
-echo "////////////////////////////////";
+echo "\n";
 
 ////////////////////////////////////////////
 //num8
+echo "num8\n";
 $num="123";
 $res=0;
 for($i = strlen($num)-1 ; $i>=0 ; $i--){
  $res=$res+$num[$i];
 }
 echo $res;
-echo "////////////////////////////////";
+echo "\n";
+
 
 //////////////////////////
 //num9
+echo "num9\n";
 $string="ayaa";
 $number=0;
 for($i = strlen($string)-1 ; $i>=0 ; $i--){
