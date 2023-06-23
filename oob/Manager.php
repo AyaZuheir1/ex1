@@ -29,7 +29,7 @@ class Manager{
         public function addStudent(Student $student)
         {
             $this->students[$student->getId()] = $student;
-            $this->write('Added student: ' . $student->getId());
+            $this->write('Add student: ' . $student->getId());
         }
     
         public function getStudentById($id)
@@ -44,7 +44,7 @@ class Manager{
         {
             if (isset($this->students[$student->getId()])) {
                 $this->students[$student->getId()] = $student;
-                $this->write('Updated student: ' . $student->getId());
+                $this->write('Update student: ' . $student->getId());
             }
         }
     
@@ -52,7 +52,7 @@ class Manager{
         {
             if (isset($this->students[$student->getId()])) {
                 unset($this->students[$student->getId()]);
-                $this->write('Deleted student: ' . $student->getId());
+                $this->write('Delete student: ' . $student->getId());
             }
         }
     }
