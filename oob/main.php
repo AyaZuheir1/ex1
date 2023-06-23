@@ -30,7 +30,7 @@ if ($retrievedStudent) {
 $manager->deleteStudent($student2);
 
 // عرض محتويات ملف السجل
-$logFileContents = file_get_contents('log.txt');
+$logFileContents = file_get_contents('print.txt');
 echo "محتويات ملف السجل:" . PHP_EOL;
 echo $logFileContents . PHP_EOL;
 ?>

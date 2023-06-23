@@ -2,22 +2,22 @@
 namespace My;
 
 use My\APP\Student;
-trait Loggable
+trait Write
 {
-    public function log($message)
+    public function write($message)
     {
-        $logFile = fopen('log.txt', 'a');
-        if ($logFile) {
-            fwrite($logFile, $message . PHP_EOL);
-            fclose($logFile);
+        $printFile = fopen('print.txt', 'a');
+        if ($printFile) {
+            fwrite($printFile, $message . PHP_EOL);
+            fclose($printFile);
         } else {
-            echo "Failed to open log file.";
+            echo "Failed to open print file.";
         }
     }
 }
 
 class Manager{
-    use Loggable;
+    use Write;
     
         private $students;
     
@@ -29,7 +29,7 @@ class Manager{
         public function addStudent(Student $student)
         {
             $this->students[$student->getId()] = $student;
-            $this->log('Added student: ' . $student->getId());
+            $this->write('Added student: ' . $student->getId());
         }
     
         public function getStudentById($id)
@@ -44,7 +44,7 @@ class Manager{
         {
             if (isset($this->students[$student->getId()])) {
                 $this->students[$student->getId()] = $student;
-                $this->log('Updated student: ' . $student->getId());
+                $this->write('Updated student: ' . $student->getId());
             }
         }
     
@@ -52,7 +52,7 @@ class Manager{
         {
             if (isset($this->students[$student->getId()])) {
                 unset($this->students[$student->getId()]);
-                $this->log('Deleted student: ' . $student->getId());
+                $this->write('Deleted student: ' . $student->getId());
             }
         }
     }
